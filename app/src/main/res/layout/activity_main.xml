@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="16sp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:textSize="32sp"
+            android:textColor="@color/black"
+            android:id="@+id/nametext"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOPPINGS"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginBottom="16sp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cream"
+            android:buttonTint="@color/teal_200"
+            android:textSize="16sp"
+            android:paddingLeft="24dp"
+            android:textStyle="bold"
+            android:id="@+id/cream"
+            tools:targetApi="lollipop"
+            android:paddingStart="24dp"
+            tools:ignore="RtlSymmetry" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choco"
+            android:buttonTint="@color/teal_200"
+            android:textSize="16sp"
+            android:paddingLeft="24dp"
+            android:textStyle="bold"
+            android:id="@+id/choco" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QUANTITY"
+            android:textStyle="bold"
+            style="@style/Custom_Text"
+            android:layout_marginTop="16sp"
+            android:layout_marginBottom="16sp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:backgroundTint="#C5CAE9"
+                android:textColor="@color/black"
+                android:onClick="decrement"
+                android:layout_margin="8dp" />
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:paddingTop="16dp"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="38dp"
+                android:textStyle="bold" />
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:backgroundTint="#C5CAE9"
+                android:textColor="@color/black"
+                android:onClick="increment"
+                android:layout_margin="8dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PRICE"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginBottom="16sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Press the order button"
+            android:id="@+id/price"
+            android:textStyle="bold"
+            android:textColor="@color/teal_200"
+            android:textSize="16sp"
+            android:layout_marginBottom="16sp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ORDER"
+            android:onClick="calculate"
+            tools:ignore="UsingOnClickInXml"
+            android:backgroundTint="@color/cardview_dark_background"/>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
